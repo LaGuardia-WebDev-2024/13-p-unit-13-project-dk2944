@@ -24,14 +24,14 @@ Select ONE Additional Feature to Add
     <h1>Quiz About [Me]</h1>
     <hr />
     <!-- Movie Question -->
-    <form id="movie-form">
+    <form id="travel-form">
       <label>
-        🎥 What is my favorite movie?
-        <select id="movie-answer">
-          <option value="movie1">movie 1</option>
-          <option value="movie2">movie 2</option>
-          <option value="movie3">movie 3</option>
-          <option value="movie4">movie 4</option>
+        ✈️ What do I love to do?
+        <select id="travel-answer">
+          <option value="travel1">stay in new york</option>
+          <option value="travel2">go on vacation for 3 days</option>
+          <option value="travel3">not go on vacation at all</option>
+          <option value="travel4">go on vacation somewhere tropical and never come back!</option>
         </select>
       </label>
       <button type="submit">Check Movie Answer</button>
@@ -43,25 +43,38 @@ Select ONE Additional Feature to Add
       <label>
         📖 What is my favorite book?
         <select id="book-answer">
-          <option value="book1">book 1</option>
-          <option value="book2">book 2</option>
-          <option value="book3">book 3</option>
-          <option value="book4">book 4</option>
+          <option value="book1">It Ends With Us</option>
+          <option value="book2">Diary Of The Wimpy Kid</option>
+          <option value="book3">Too Late by Colleen Hoover</option>
+          <option value="book4">The Great Gatsby</option>
         </select>
       </label>
       <button type="submit">Check Book Answer</button>
     </form>
     <div id="book-result"></div>
+    <form id="hobby-form">
+      <label>
+        🎤 What is my favorite Hobby?
+        <select id="hobby-answer">
+          <option value="hobby1">Hiking</option>
+          <option value="hobby2">Doing Calculus work</option>
+          <option value="hobby3">Singing!</option>
+          <option value="hobby4">Don't have one</option>
+        </select>
+      </label>
+      <button type="submit">Check Book Answer</button>
+    </form>
+    <div id="hobby-result"></div>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
     <script>
       //Movie Question jQuery Code
-      $("#movie-form").on("submit", function (event) {
+      $("#travel-form").on("submit", function (event) {
         event.preventDefault();
 
-        var $answer = $("#movie-answer");
+        var $answer = $("#travel-answer");
         var answer = $answer.val();
 
-        if (answer === "movie1") {
+        if (answer === "travel4") {
           $("#movie-result").text("YESSSS!");
         } else {
           $("#movie-result").text("Try Again!");
@@ -76,9 +89,22 @@ Select ONE Additional Feature to Add
         var answer = $answer.val();
 
         if (answer === "book1") {
-          $("#book-result").text("YESSSS!");
+          $("#book-result").text("YESSSS, It's so good!");
         } else {
-          $("#book-result").text("Try Again!");
+          $("#book-result").text("absolutely not!");
+        }
+      });
+      //hobby question 
+      $("#hobby-form").on("submit", function (event) {
+        event.preventDefault();
+
+        var $answer = $("#hobby-answer");
+        var answer = $answer.val();
+
+        if (answer === "hobby3") {
+          $("#hobby-result").text("YESSSS, It's my life");
+        } else {
+          $("#hobby-result").text("no!");
         }
       });
     </script>

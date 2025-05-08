@@ -1,5 +1,5 @@
 #movie-result {
-  background: rgb(244, 98, 181);
+  background: rgb(255, 154, 154);
   border: 5px solid black;
   font-size: 24px;
   height: 160px;
@@ -8,7 +8,16 @@
 }
 
 #book-result {
-  background: rgb(196, 159, 255);
+  background: rgb(255, 154, 154);
+  border: 5px solid black;
+  font-size: 24px;
+  height: 160px;
+  margin-top: 10px;
+  margin-bottom: 20px;
+}
+
+#hobby-result {
+  background: rgb(255, 154, 154);
   border: 5px solid black;
   font-size: 24px;
   height: 160px;
@@ -18,5 +27,14 @@
 
 hr {
   height: 5px;
-  background-color: black;
+  background-color: rgb(255, 219, 219);
 }
+
+body { font-family: fantasy;
+    
+}
+
+h1 {font-family: Monaco,serif;
+  color: rgb(255, 154, 154);
+}
+
