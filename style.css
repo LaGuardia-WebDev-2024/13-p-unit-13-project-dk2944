@@ -1,8 +1,8 @@
-#movie-result {
+#travel-result {
   background: rgb(255, 154, 154);
   border: 5px solid black;
   font-size: 24px;
-  height: 160px;
+  
   margin-top: 10px;
   margin-bottom: 20px;
 }
@@ -11,7 +11,7 @@
   background: rgb(255, 154, 154);
   border: 5px solid black;
   font-size: 24px;
-  height: 160px;
+  
   margin-top: 10px;
   margin-bottom: 20px;
 }
@@ -20,7 +20,7 @@
   background: rgb(255, 154, 154);
   border: 5px solid black;
   font-size: 24px;
-  height: 160px;
+ 
   margin-top: 10px;
   margin-bottom: 20px;
 }
