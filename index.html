@@ -21,51 +21,86 @@ Select ONE Additional Feature to Add
     <link href="style.css" rel="stylesheet" type="text/css" />
   </head>
   <body>
-    <h1>Quiz About [Me]</h1>
+    <h1>Quiz About Deaaa!!!</h1>
     <hr />
     <!-- Movie Question -->
-    <form id="movie-form">
+    <form id="travel-form">
       <label>
-        🎥 What is my favorite movie?
-        <select id="movie-answer">
-          <option value="movie1">movie 1</option>
-          <option value="movie2">movie 2</option>
-          <option value="movie3">movie 3</option>
-          <option value="movie4">movie 4</option>
+        ✈️ What do I love to do?
+        <select id="travel-answer">
+          <option value="travel1">stay in new york</option>
+          <option value="travel2">go on vacation for 3 days</option>
+          <option value="travel3">not go on vacation at all</option>
+          <option value="travel4">
+            go on vacation somewhere tropical and never come back!
+          </option>
         </select>
       </label>
-      <button type="submit">Check Movie Answer</button>
+      <button type="submit">Check travel Answer</button>
     </form>
-    <div id="movie-result"></div>
+    <div id="travel-result">
+      <p id="t-result"></p>
+      <img
+       id="travel" style="display:none" src="https://images.wsj.net/im-931182/?width=1280&height=657"
+        width="250"
+      />
+    </div>
     <hr />
     <!-- Book Question -->
     <form id="book-form">
       <label>
         📖 What is my favorite book?
         <select id="book-answer">
-          <option value="book1">book 1</option>
-          <option value="book2">book 2</option>
-          <option value="book3">book 3</option>
-          <option value="book4">book 4</option>
+          <option value="book1">Too Late</option>
+          <option value="book2">Diary Of The Wimpy Kid</option>
+          <option value="book3">It Ends With Us</option>
+          <option value="book4">The Great Gatsby</option>
         </select>
       </label>
       <button type="submit">Check Book Answer</button>
     </form>
-    <div id="book-result"></div>
+    <div id="book-result">
+    <p id="b-result"> </p>
+      <img
+          id="tooLate" style="display:none" src="https://t4.ftcdn.net/jpg/09/03/98/75/360_F_903987585_8hPfGgrpAnCQ0nxDbSGCaEVnlgAQ9udu.jpg" width="250">
+    </div>
+    <form id="hobby-form">
+      <label>
+        🎤 What is my favorite Hobby?
+        <select id="hobby-answer">
+          <option value="hobby1">Hiking</option>
+          <option value="hobby2">Doing Calculus work</option>
+          <option value="hobby3">Singing!</option>
+          <option value="hobby4">Don't have one</option>
+        </select>
+      </label>
+      <button type="submit">Check Book Answer</button>
+    </form>
+    <div id="hobby-result">
+   <p id="h-result">
+     
+      </p>
+      <img
+      id="singing" style="display:none" src="https://thumbs.dreamstime.com/b/neon-drenched-synthwave-music-studio-d-background-room-retro-futuristic-design-glowing-keyboards-analog-synthesizers-368927665.jpg" width="250">
+    
+    
+    </div>
+    
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
     <script>
       //Movie Question jQuery Code
-      $("#movie-form").on("submit", function (event) {
+      $("#travel-form").on("submit", function (event) {
         event.preventDefault();
 
-        var $answer = $("#movie-answer");
+        var $answer = $("#travel-answer");
         var answer = $answer.val();
 
-        if (answer === "movie1") {
-          $("#movie-result").text("YESSSS!");
+        if (answer === "travel4") {
+          $("#t-result").text("YESSSS!");
         } else {
-          $("#movie-result").text("Try Again!");
+          $("#t-result").text("Try Again!");
         }
+           $("#travel").fadeIn(2000)
       });
 
       //Book Question jQuery Code
@@ -76,10 +111,25 @@ Select ONE Additional Feature to Add
         var answer = $answer.val();
 
         if (answer === "book1") {
-          $("#book-result").text("YESSSS!");
+          $("#b-result").text("YESSSS, It's so good!");
         } else {
-          $("#book-result").text("Try Again!");
+          $("#b-result").text("absolutely not!");
         }
+        $("#tooLate").fadeIn(2000)
+      });
+      //hobby question
+      $("#hobby-form").on("submit", function (event) {
+        event.preventDefault();
+
+        var $answer = $("#hobby-answer");
+        var answer = $answer.val();
+
+        if (answer === "hobby3") {
+          $("#h-result").text("YESSSS, It's my life");
+        } else {
+          $("#h-result").text("no!");
+        }
+        $("#singing").slideDown(2000)
       });
     </script>
   </body>
